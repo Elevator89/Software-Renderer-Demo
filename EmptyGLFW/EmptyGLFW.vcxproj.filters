@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="Sources\Math\Basics.h" />
+    <ClInclude Include="Sources\Math\Math.h" />
+    <ClInclude Include="Sources\Math\Matr3.h" />
+    <ClInclude Include="Sources\Math\Vec3.h" />
+    <ClInclude Include="Sources\Interfaces\Initializable.h" />
+    <ClInclude Include="Sources\Interfaces\Tickable.h" />
+    <ClInclude Include="Sources\Common.h" />
+    <ClInclude Include="Sources\Interfaces\Interfaces.h" />
+    <ClInclude Include="Sources\Engine\Renderer.h" />
+    <ClInclude Include="Sources\Engine\GlRenderer.h" />
+    <ClInclude Include="Sources\Math\Vec4.h" />
+    <ClInclude Include="Sources\Math\Matr4.h" />
+    <ClInclude Include="Sources\Interfaces\Oriented.h" />
+    <ClInclude Include="Sources\Math\Transform.h" />
+    <ClInclude Include="Sources\Engine\Camera.h" />
+    <ClInclude Include="Sources\Engine\Scene.h" />
+    <ClInclude Include="Sources\Interfaces\MouseListener.h" />
+    <ClInclude Include="Sources\Interfaces\KeyboardListener.h" />
+    <ClInclude Include="Sources\Engine\Mouse.h" />
+    <ClInclude Include="Sources\Engine\Keyboard.h" />
+    <ClInclude Include="Sources\Math\Rotation.h" />
+    <ClInclude Include="Sources\Math\Quat.h" />
+    <ClInclude Include="Sources\Engine\Color.h" />
+    <ClInclude Include="Sources\Entities\Entities.h" />
+    <ClInclude Include="Sources\Entities\Entity.h" />
+    <ClInclude Include="Sources\Entities\Light.h" />
+    <ClInclude Include="Sources\Entities\LightDef.h" />
+    <ClInclude Include="Sources\Entities\Shape.h" />
+    <ClInclude Include="Sources\Entities\Thorus.h" />
+    <ClInclude Include="Sources\Engine\CpuRenderer.h" />
+    <ClInclude Include="Sources\Engine\CpuRendering\RGBBuffer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Sources\main.cpp" />
+    <ClCompile Include="Sources\Math\Matr3.cpp" />
+    <ClCompile Include="Sources\Math\Vec3.cpp" />
+    <ClCompile Include="Sources\Engine\Renderer.cpp" />
+    <ClCompile Include="Sources\Engine\GlRenderer.cpp" />
+    <ClCompile Include="Sources\Math\Vec4.cpp" />
+    <ClCompile Include="Sources\Math\Matr4.cpp" />
+    <ClCompile Include="Sources\Math\Transform.cpp" />
+    <ClCompile Include="Sources\Engine\Camera.cpp" />
+    <ClCompile Include="Sources\Engine\Scene.cpp" />
+    <ClCompile Include="Sources\Engine\Mouse.cpp" />
+    <ClCompile Include="Sources\Engine\Keyboard.cpp" />
+    <ClCompile Include="Sources\Math\Rotation.cpp" />
+    <ClCompile Include="Sources\Math\Quat.cpp" />
+    <ClCompile Include="Sources\Engine\Color.cpp" />
+    <ClCompile Include="Sources\Entities\Light.cpp" />
+    <ClCompile Include="Sources\Entities\LightDef.cpp" />
+    <ClCompile Include="Sources\Entities\Shape.cpp" />
+    <ClCompile Include="Sources\Entities\Thorus.cpp" />
+    <ClCompile Include="Sources\Engine\CpuRenderer.cpp" />
+    <ClCompile Include="Sources\Engine\CpuRendering\RGBBuffer.cpp" />
+  </ItemGroup>
+</Project>

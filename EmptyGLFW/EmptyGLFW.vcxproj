@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>glfwEngine</ProjectName>
+    <ProjectGuid>{A97C15D0-D248-4C23-BCC8-C430F6212413}</ProjectGuid>
+    <RootNamespace>gldesuproject</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <ReferencePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Sources; Sources\Common</ReferencePath>
+    <ReferencePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Sources; Sources\Common</ReferencePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>Sources; include;</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE; GLFW_DLL</PreprocessorDefinitions>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <PrecompiledHeaderFile>Common.h</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>glfwdll.lib; opengl32.lib; glu32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>LibRelease</AdditionalLibraryDirectories>
+      <EntryPointSymbol>
+      </EntryPointSymbol>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>Sources; include;</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <PrecompiledHeaderFile>Common.h</PrecompiledHeaderFile>
+      <PreprocessorDefinitions>_UNICODE;UNICODE; NDEBUG; GLFW_DLL</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>glfwdll.lib; opengl32.lib; glu32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>LibRelease;</AdditionalLibraryDirectories>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Sources\Entities\Entities.h" />
+    <ClInclude Include="Sources\Entities\Shape.h" />
+    <ClInclude Include="Sources\Entities\Light.h" />
+    <ClInclude Include="Sources\Entities\Entity.h" />
+    <ClInclude Include="Sources\Entities\LightDef.h" />
+    <ClInclude Include="Sources\Entities\Thorus.h" />
+    <ClInclude Include="Sources\Engine\CpuRendering\RGBBuffer.h" />
+    <ClInclude Include="Sources\Engine\Color.h" />
+    <ClInclude Include="Sources\Engine\CpuRenderer.h" />
+    <ClInclude Include="Sources\Math\Quat.h" />
+    <ClInclude Include="Sources\Math\Rotation.h" />
+    <ClInclude Include="Sources\Engine\Keyboard.h" />
+    <ClInclude Include="Sources\Engine\Mouse.h" />
+    <ClInclude Include="Sources\Engine\Scene.h" />
+    <ClInclude Include="Sources\Engine\Camera.h" />
+    <ClInclude Include="Sources\Interfaces\KeyboardListener.h" />
+    <ClInclude Include="Sources\Interfaces\MouseListener.h" />
+    <ClInclude Include="Sources\Interfaces\Oriented.h" />
+    <ClInclude Include="Sources\Math\Matr4.h" />
+    <ClInclude Include="Sources\Engine\GlRenderer.h" />
+    <ClInclude Include="Sources\Interfaces\Interfaces.h" />
+    <ClInclude Include="Sources\Interfaces\Tickable.h" />
+    <ClInclude Include="Sources\Math\Math.h" />
+    <ClInclude Include="Sources\Math\Matr3.h" />
+    <ClInclude Include="Sources\Engine\Renderer.h" />
+    <ClInclude Include="Sources\Math\Basics.h" />
+    <ClInclude Include="Sources\Common.h" />
+    <ClInclude Include="Sources\Interfaces\Initializable.h" />
+    <ClInclude Include="Sources\Math\Vec3.h" />
+    <ClInclude Include="Sources\Math\Vec4.h" />
+    <ClInclude Include="Sources\Math\Transform.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Sources\Entities\Shape.cpp" />
+    <ClCompile Include="Sources\Entities\Light.cpp" />
+    <ClCompile Include="Sources\Engine\Color.cpp" />
+    <ClCompile Include="Sources\Entities\LightDef.cpp" />
+    <ClCompile Include="Sources\Entities\Thorus.cpp" />
+    <ClCompile Include="Sources\Engine\CpuRendering\RGBBuffer.cpp" />
+    <ClCompile Include="Sources\Engine\CpuRenderer.cpp" />
+    <ClCompile Include="Sources\Math\Quat.cpp" />
+    <ClCompile Include="Sources\Math\Rotation.cpp" />
+    <ClCompile Include="Sources\Engine\Keyboard.cpp" />
+    <ClCompile Include="Sources\Engine\Mouse.cpp" />
+    <ClCompile Include="Sources\Engine\Scene.cpp" />
+    <ClCompile Include="Sources\Engine\Camera.cpp" />
+    <ClCompile Include="Sources\Math\Matr4.cpp" />
+    <ClCompile Include="Sources\Engine\GlRenderer.cpp" />
+    <ClCompile Include="Sources\Math\Matr3.cpp" />
+    <ClCompile Include="Sources\Engine\Renderer.cpp" />
+    <ClCompile Include="Sources\Math\Vec3.cpp" />
+    <ClCompile Include="Sources\main.cpp" />
+    <ClCompile Include="Sources\Math\Vec4.cpp" />
+    <ClCompile Include="Sources\Math\Transform.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
